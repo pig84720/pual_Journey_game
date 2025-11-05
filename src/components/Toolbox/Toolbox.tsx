@@ -56,15 +56,15 @@ export function Toolbox() {
   }, [shuffledEvents, usedEventsKeys]);
 
   return (
-    <div className="h-full flex flex-col bg-surface border-l border-brand-100">
-      {/* 頭部 */}
-      <div className="p-4 space-y-3 border-b border-brand-100">
+    <div className="h-full bg-surface border-l border-brand-100 overflow-y-auto">
+      {/* 頭部 - 會一起滾動，但可用 sticky 固定 */}
+      <div className="sticky top-0 bg-surface z-10 p-4 space-y-3 border-b border-brand-100">
         {/* 分頁 */}
         <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
       </div>
 
       {/* 卡片列表 */}
-      <div className="flex-1 overflow-y-auto p-4">
+      <div className="p-4">
         <div className="space-y-3">
           {activeTab === 'city' && (
             <div role="tabpanel" id="city-cards" aria-label="城市卡片">

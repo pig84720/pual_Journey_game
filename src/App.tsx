@@ -58,9 +58,11 @@ function App() {
 
   return (
     <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
-      <div className="min-h-screen bg-surface flex flex-col">
+      <div className="h-screen bg-surface flex flex-col overflow-hidden">
         {/* 頂部導航 */}
-        <HeaderBar />
+        <div className="flex-shrink-0">
+          <HeaderBar />
+        </div>
 
         {/* 主要內容區 */}
         <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
@@ -71,14 +73,16 @@ function App() {
             </div>
           </main>
 
-          {/* 工具箱（卡片池） */}
-          <aside className="w-full lg:w-96 overflow-y-auto">
+          {/* 工具箱（卡片池） - 右側固定區域 */}
+          <aside className="w-full lg:w-96 flex-shrink-0">
             <Toolbox />
           </aside>
         </div>
 
         {/* 控制列 */}
-        <ControlBar />
+        <div className="flex-shrink-0">
+          <ControlBar />
+        </div>
 
         {/* 結果面板 */}
         <ResultPanel />
