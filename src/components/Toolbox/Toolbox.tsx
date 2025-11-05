@@ -76,7 +76,7 @@ export function Toolbox() {
                 ))
               ) : (
                 <p className="text-center text-on/40 py-8">
-                  所有地點卡片已放置
+                  所有地點皆已放置
                 </p>
               )}
             </div>
@@ -92,7 +92,7 @@ export function Toolbox() {
                 ))
               ) : (
                 <p className="text-center text-on/40 py-8">
-                  所有事件卡片已放置
+                  所有事件皆已放置
                 </p>
               )}
             </div>
